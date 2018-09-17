@@ -22,7 +22,7 @@ int get_point_mutations(std::string dna1, std::string dna2)
 std::string get_dna_complement(std::string dna)
 {
 	
-	std::string reverse = "";
+	std::string reverse = { };
 
 	for (int i = dna.size() -1; i >= 0; --i) {
 		reverse += dna[i];
@@ -52,15 +52,21 @@ std::string get_dna_complement(std::string dna)
 //write function code for std::string transcribe_dna_into_rna(std::string dna);
 std::string transcribe_dna_into_rna(std::string dna)
 {
+	std::string rna = { };
+	
 	for (unsigned int i = 0; i < dna.size(); ++i)
 	{
 		if (dna[i] == 'T')
 		{
-			dna[i] = 'U';
+			rna += 'U';
+		}
+		else
+		{
+			rna += dna[i];
 		}
 	}
 
-	return dna;
+	return rna;
 }
 
 

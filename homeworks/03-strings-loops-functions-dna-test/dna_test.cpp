@@ -12,7 +12,6 @@ TEST_CASE("Test round with precision")
 TEST_CASE("Test get point mutations", "Dna strings ") {
 	//test not equal in length return value of -1
 	REQUIRE(get_point_mutations("GAGCCTACTAACGGGAT", "CATCGTAATGACGG") == -1);
-
 	REQUIRE(get_point_mutations("GAGCCTACTAACGGGAT", "GAGCCTACTAACGGGAT") == 0);
 	REQUIRE(get_point_mutations("GAGCCTACTAACGGGAT", "GATCGTAATGACGGCAT") == 5);
 	REQUIRE(get_point_mutations("GAGCCTACTAACGGGAT", "CATCGTAATGACGGCCT") == 7);
@@ -29,9 +28,6 @@ TEST_CASE("Test DNA complements", "DNA strings") {
 	REQUIRE( get_dna_complement("AAAACCCGGT") == "ACCGGGTTTT");
 	REQUIRE( get_dna_complement("CCCGGAAAAT") == "ATTTTCCGGG");
 }
-
-
-
 
 
 /*
