@@ -26,8 +26,8 @@ CCCGGAAAAT result should be ATTTTCCGGG
 */
 
 TEST_CASE("Test DNA complements", "DNA strings") {
-	REQUIRE(get_dna_complement("AAAACCCGGT") == ("ACCGGGTTTT");
-	REQUIRE(get_dna_complement("CCCGGAAAAT") == ("ATTTTCCGGG");
+	REQUIRE(get_dna_complement(("AAAACCCGGT") == ("ACCGGGTTTT"));
+	REQUIRE(get_dna_complement(("CCCGGAAAAT") == ("ATTTTCCGGG"));
 }
 
 
