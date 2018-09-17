@@ -25,6 +25,11 @@ AAAACCCGGT result should be ACCGGGTTTT
 CCCGGAAAAT result should be ATTTTCCGGG
 */
 
+TEST_CASE("Test DNA complements", "DNA strings") {
+	REQUIRE(get_dna_complement("AAAACCCGGT") == ("ACCGGGTTTT");
+	REQUIRE(get_dna_complement("CCCGGAAAAT") == ("ATTTTCCGGG");
+}
+
 
 
 
@@ -34,7 +39,10 @@ GATGGAACTTGACTACGTAAATT result should be GAUGGAACUUGACUACGUAAAUU
 AAATTGATCTTGACTACGTGGAA result should be AAAUUGAUCUUGACUACGUGGAA
 
 */
-
+TEST_CASE("Test transcribing DNA into RNA", "DNA strings") {
+	REQUIRE(transcribe_dna_into_rna("GATGGAACTTGACTACGTAAATT") == "GAUGGAACUUGACUACGUAAAUU");
+	REQUIRE(transcribe_dna_into_rna("AAATTGATCTTGACTACGTGGAA") == "AAAUUGAUCUUGACUACGUGGAA");
+}
 
 
 

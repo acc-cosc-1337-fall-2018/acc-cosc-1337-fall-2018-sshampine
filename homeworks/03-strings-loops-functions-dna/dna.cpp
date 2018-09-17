@@ -3,16 +3,65 @@
 
 int get_point_mutations(std::string dna1, std::string dna2)
 {	//write the function code 
-	
-	return 0;
+	// if (dna1[i] == dna2[2]) increase mutation counter
+
+	int mutation = 0;
+	if (dna1.size() == dna2.size()) {
+		for (unsigned int i = 0; i < dna1.size(); ++i) {
+			if (dna1[i] != dna2[i]) {
+				++mutation;
+			}
+		}
+		return mutation;
+	}
+	else return -1;
 }
 
 
 //write function code for std::string get_dna_complement(std::string dna)
+std::string get_dna_complement(std::string dna)
+{
+	
+	std::string reverse = "";
+
+	for (int i = dna.size() -1; i >= 0; --i) {
+		reverse += dna[i];
+	}
+	
+
+	for (int i = 0; i < reverse.size(); ++i) {
+		if (reverse[i] == 'T') {
+			reverse[i] = 'A';
+		}
+		else if (reverse[i] == 'A') {
+			reverse[i] = 'T';
+		}
+		else if (reverse[i] == 'C') {
+			reverse[i] = 'G';
+		}
+		else if (reverse[i] == 'G') {
+			reverse[i] = 'C';
+		}
+	}
+
+	return reverse;
+}
 
 
 
 //write function code for std::string transcribe_dna_into_rna(std::string dna);
+std::string transcribe_dna_into_rna(std::string dna)
+{
+	for (unsigned int i = 0; i < dna.size(); ++i)
+	{
+		if (dna[i] == 'T')
+		{
+			dna[i] = 'U';
+		}
+	}
+
+	return dna;
+}
 
 
 
@@ -28,7 +77,9 @@ double get_gc_content(std::string dna)
 		//in C++ logical and is && and logical or is ||
 		//usage (and) condition1 && condition2 --- usage (or) condition1 || condition2 
 		//write code to determine if s is 'C' or 'G' then increment gc_count by 1
-
+		if ( (s == 'C') || (s == 'G') ) {
+			++gc_count;
+		}
 
 	}
 

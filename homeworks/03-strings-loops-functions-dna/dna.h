@@ -38,6 +38,12 @@ complement of each symbol (e.g., the reverse complement of "GTCA" is
 IMPORTANT!!: ADD PARAMETER(@param) AND RETURN(@return) COMMENTS 
 (see my example above)
 
+Sample Dataset (function parameter)
+Parameter dna: CCACCCTCGTGGTATGGCTAGGCATTCAGGAACCGGAGAACGCTTCAGACCAGCCCGGAC
+TGGGAACCTGCGGGCAGTAGGTGGAAT
+Sample Output (function return value)
+60.919540
+
 */
 std::string get_dna_complement(std::string dna);
 
@@ -53,13 +59,19 @@ IMPORTANT!!:
 DEFINE FUNCTION PROTOTYPE BELOW AND
 ADD PARAMETER(@param) AND RETURN(@return) COMMENTS 
 (see my example above)
+
+Sample Dataset (function parameter)
+Parameter transcribe_dna_into_rna : GATGGAACTTGACTACGTAAATT
+Sample Output (function return value)
+GAUGGAACUUGACUACGUAAAUU
+
 */
 
 //define function prototype for transcribe_dna_into_rna with one string parameter
 //that returns a string
 
 
-
+std::string transcribe_dna_into_rna(std::string dna);
 
 
 /**
@@ -73,6 +85,13 @@ IMPORTANT!!:
 DEFINE FUNCTION PROTOTYPE BELOW AND
 ADD PARAMETER(@param) AND RETURN(@return) COMMENTS
 (see my example above)
+
+Sample Dataset (function parameter)
+Parameter dna: CCACCCTCGTGGTATGGCTAGGCATTCAGGAACCGGAGAACGCTTCAGACCAGCCCGGAC
+TGGGAACCTGCGGGCAGTAGGTGGAAT
+Sample Output (function return value)
+60.919540
+
 */
 
 //define function prototype for get_gc_content with a string parameter that returns
