@@ -72,4 +72,4 @@ Psuedocode:
 	make sure to return vector of ints primes after loop exits
 */
 //write function prototype here
-int vector_of_primes(int number);
+vector<int> vector_of_primes(int number);

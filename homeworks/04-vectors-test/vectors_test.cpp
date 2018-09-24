@@ -8,11 +8,11 @@
 //with values 99, 1000, 10, 500, 66, 770, 10 result should be 1000
 TEST_CASE("Test for max value in vector")
 {
-	vector <int> numbers1{ 4, 5, 1, 50, 6, 77, 0 };
-	REQUIRE(get_max_from_vector(numbers1) == 77);
+	vector <int> numbers{ 4, 5, 1, 50, 6, 77, 0 };
+	REQUIRE(get_max_from_vector(numbers) == 77);
 
-	vector <int> numbers2{ 99, 1000, 10, 500, 66, 770, 10 };
-	REQUIRE(get_max_from_vector(numbers2) == 1000);
+	numbers = { 99, 1000, 10, 500, 66, 770, 10 };
+	REQUIRE(get_max_from_vector(numbers) == 1000);
 
 }
 
@@ -23,11 +23,11 @@ TEST_CASE("Test for max value in vector")
 //with values 2, 3, 4 , 5 result should be 54
 TEST_CASE("Test for sum of square in vector")
 {
-	vector <int> numbers1{ 2,3,4 };
-	REQUIRE(sum_of_squares(numbers1) == 29);
+	vector <int> numbers{ 2,3,4 };
+	REQUIRE(sum_of_squares(numbers) == 29);
 
-	vector <int> numbers2{ 2, 3, 4, 5 };
-	REQUIRE(sum_of_squares(numbers2) == 54);
+	numbers = { 2, 3, 4, 5 };
+	REQUIRE(sum_of_squares(numbers) == 54);
 }
 
 
@@ -58,6 +58,7 @@ TEST_CASE("Test for replace vector element")
 
 	/*remove the asterisk and forward slash to run TEST_CASE assertions */
 	
+	
 }
 
 
@@ -79,7 +80,7 @@ TEST_CASE("Tests in integer for primness")
 //2 3 5 7 11 13 17 19 23 29 31 37 41 43 47
 TEST_CASE("Test vector of primes") 
 {
-	/*remove the forward slash and asterisk to run TEST_CASE assertions 
+	/*remove the forward slash and asterisk to run TEST_CASE assertions */
 
 	vector<int> primes_up_to_10{ 2,3,5,7 };
 
@@ -91,10 +92,21 @@ TEST_CASE("Test vector of primes")
 	for (std::size_t i = 0; i <  primes_up_to_10.size(); ++i)
 	{
 		REQUIRE(primes_up_to_10[i] == primes[i]);
-	}*/
+	}
 
 	/*WRITE THE TEST CASE FOR PRIMES UP TO 50; FOLLOW MY EXAMPLE ABOVE
 
 	remove the asterisk and forward slash to run TEST_CASE assertions
 	*/
+
+	vector<int> primes_up_to_50{ 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47 };
+	primes = vector_of_primes(50);
+	
+	are_prime = true;
+
+	for (std::size_t i = 0; i < primes_up_to_50.size(); ++i)
+	{
+		REQUIRE(primes_up_to_50[i] == primes[i]);
+	}
+
 }

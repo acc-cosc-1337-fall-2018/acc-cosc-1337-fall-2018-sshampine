@@ -4,9 +4,9 @@ int get_max_from_vector(vector<int>& numbers)
 {
 	//write your code here
 	int max_num{0};
-	for (int i = 0; i <= numbers.size() - 1; ++i) {
-		if (numbers[i] > max_num) {
-			max_num = numbers[i];
+	for (auto i : numbers) {
+		if (i > max_num) {
+			max_num = i;
 		}
 	}
 
@@ -18,8 +18,8 @@ int sum_of_squares(vector<int>& numbers)
 {
 	int sum{0};
 
-	for (int i = 0; i <= numbers.size() - 1; ++i) {
-		sum += (numbers[i] * numbers[i]);
+	for (auto i : numbers) {
+		sum += i * i;
 	}
 
 	return sum;
@@ -35,6 +35,13 @@ void replace(vector<string>& strings, const string& old, const string& new_val)
 	//Also there is no need to return the strings vector because a reference
 	//points to a previously declared vector of strings variable(see test case 
 	//in vectors_test.cp)
+
+	for (int i = 0; i < strings.size(); ++i)
+	{
+		if (strings[i] == old) {
+			strings[i] = new_val;
+		}
+	}
 
 
 }
@@ -59,16 +66,16 @@ int is_prime(int number)
 
 
 //write vector_of_primes function code here
-int vector_of_primes(int n)
+vector<int> vector_of_primes(int number)
 {
-/*	vector<int> primes{};
-	for (int i = 1; i < n; ++i)
+	vector<int> primes{};
+	for (int i = 1; i < number; ++i)
 	{
-		if (is_prime(i) == true)
+		if (is_prime(i))
 		{
-			primes.push_back[i];
+			primes.push_back(i);
 		}
 	}
-*/
-	return 0; 
+	
+	return primes; 
 }
