@@ -78,35 +78,28 @@ TEST_CASE("Tests in integer for primness")
 //argument 10 return vector should have the following items 2 3 5 7
 //argument 50 return vector should have the following items
 //2 3 5 7 11 13 17 19 23 29 31 37 41 43 47
-TEST_CASE("Test vector of primes") 
+TEST_CASE("Test vector of primes")
 {
-	/*remove the forward slash and asterisk to run TEST_CASE assertions */
-
+	//remove the forward slash and asterisk to run TEST_CASE assertions
 	vector<int> primes_up_to_10{ 2,3,5,7 };
-
 	vector<int> primes = vector_of_primes(10);
 	REQUIRE(primes_up_to_10.size() == primes.size());
-
-	bool are_prime = true; //assume all vector ints are prime 
-
+	bool are_prime = true; //assume all vector ints are prime
 	for (std::size_t i = 0; i <  primes_up_to_10.size(); ++i)
 	{
 		REQUIRE(primes_up_to_10[i] == primes[i]);
 	}
-
 	/*WRITE THE TEST CASE FOR PRIMES UP TO 50; FOLLOW MY EXAMPLE ABOVE
-
 	remove the asterisk and forward slash to run TEST_CASE assertions
 	*/
 
-	vector<int> primes_up_to_50{ 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47 };
+	vector<int> primes_up_to_50{ 2,3,5,7,11,13,17,19,23,29,31,37,41,43,47 };
 	primes = vector_of_primes(50);
-	
-	are_prime = true;
-
+	REQUIRE(primes_up_to_50.size() == primes.size());
+	are_prime = true; //assume all vector ints are prime
 	for (std::size_t i = 0; i < primes_up_to_50.size(); ++i)
 	{
 		REQUIRE(primes_up_to_50[i] == primes[i]);
 	}
-
 }
+	

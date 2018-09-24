@@ -52,14 +52,11 @@ int is_prime(int number)
 	//iterate through up to value of number times
 	//for each iteration; the number is prime if the iterator % number == 0 only. 
 	
-		for (int i = 2; i < number; ++i){
-			if ( number % i == 0) 
-			{
+	for (int i = 2; i < number; ++i) {
+		if (number % i == 0) {
 			return false;
-			}
-			
 		}
-	
+	}
 		return true;
 }
 
@@ -69,7 +66,7 @@ int is_prime(int number)
 vector<int> vector_of_primes(int number)
 {
 	vector<int> primes{};
-	for (int i = 1; i < number; ++i)
+	for (int i = 2; i < number; ++i)
 	{
 		if (is_prime(i))
 		{
